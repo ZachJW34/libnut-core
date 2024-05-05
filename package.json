@@ -10,16 +10,12 @@
     "build:debug": "cmake-js rebuild --CDCMAKE_OSX_ARCHITECTURES=\"arm64;x86_64\" --debug",
     "build:release": "cmake-js rebuild --CDCMAKE_OSX_ARCHITECTURES=\"arm64;x86_64\"",
     "prepublishOnly": "npm run build:release",
-    "publish:next": "npm publish --tag next"
+    "publish:next": "npm publish --tag next --access public"
   },
   "homepage": "https://nutjs.dev",
-  "author": {
-    "name": "dry Software UG (haftungsbeschränkt)",
-    "email": "info@dry.software",
-    "url": "https://dry.software"
-  },
+  "author": "Zachary Williams <zachjw34@gmail.com>",
   "bugs": {
-    "url": "https://github.com/nut-tree/nut.js/issues"
+    "url": "https://github.com/ZachJW34/libnut-core/issues"
   },
   "keywords": [
     "GUI",
@@ -42,7 +38,7 @@
     "node-addon-api": "7.1.0"
   },
   "optionalDependencies": {
-    "@nut-tree/node-mac-permissions": "2.2.1"
+    "@nut-tree-fork/node-mac-permissions": "2.2.1"
   },
   "engines": {
     "node": ">=10.15.3"
