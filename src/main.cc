@@ -315,8 +315,6 @@ static KeyNames key_names[] =
                 {"meta",              K_META},
                 {"right_meta",        K_RIGHTMETA},
 
-                {"command",           K_META},
-
                 {"cmd",               K_CMD},
                 {"right_cmd",         K_RIGHTCMD},
 
@@ -418,10 +416,10 @@ int CheckKeyFlags(std::string &flagString, MMKeyFlags *flags) {
     if (flagString == "alt" || flagString == "right_alt") {
         *flags = MOD_ALT;
 #if defined(IS_MACOSX)
-    } else if (flagString == "command" || flagString == "meta" || flagString == "right_meta" || flagString == "cmd" || flagString == "right_cmd") {
+    } else if (flagString == "meta" || flagString == "right_meta" || flagString == "cmd" || flagString == "right_cmd") {
         *flags = MOD_META;
 #else
-        } else if (flagString == "command"  || flagString == "meta" || flagString == "right_meta" || flagString == "win" || flagString == "right_win") {
+        } else if (flagString == "meta" || flagString == "right_meta" || flagString == "win" || flagString == "right_win") {
     *flags = MOD_META;
 #endif
     } else if (flagString == "control" || flagString == "right_control") {
